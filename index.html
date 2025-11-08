@@ -1,11 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eye Gaze Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            color: #1a73e8;
+        }
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Eye Gaze Project</h1>
-    <p>This project uses Python scripts like clicker.py, camera_test.py, etc.</p>
-    <p>You can view the code in this repository.</p>
+    <div class="container">
+        <h1>Eye Gaze Project</h1>
+        <p>Welcome! This project uses Python scripts to detect eye movements and clicks based on blinking. You can download the scripts and run them locally in your Python environment.</p>
+
+        <h2>Project Files</h2>
+        <ul>
+            <li><a href="eye_gaze_project/calibrator.py" download>calibrator.py</a></li>
+            <li><a href="eye_gaze_project/camera_test.py" download>camera_test.py</a></li>
+            <li><a href="eye_gaze_project/clicker.py" download>clicker.py</a></li>
+            <li><a href="eye_gaze_project/eye_gaze_opencv.py" download>eye_gaze_opencv.py</a></li>
+            <li><a href="eye_gaze_project/README.md" download>README.md</a></li>
+            <li><a href="eye_gaze_project/requirements.txt" download>requirements.txt</a></li>
+        </ul>
+
+        <h2>Instructions</h2>
+        <ol>
+            <li>Clone or download this repository.</li>
+            <li>Install the required dependencies using:
+                <pre>pip install -r requirements.txt</pre>
+            </li>
+            <li>Run the scripts in your Python environment.</li>
+        </ol>
+
+        <h2>Note</h2>
+        <p>These scripts cannot run directly on GitHub Pages because it only serves static content. Run them locally using Python.</p>
+    </div>
 </body>
 </html>
