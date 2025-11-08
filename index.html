@@ -1,57 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eye Gaze Project</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #1a73e8;
-        }
-        p {
-            font-size: 18px;
-        }
-        a {
-            color: #1a73e8;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 10px 0;
-        }
-        code {
-            background: #e8e8e8;
-            padding: 2px 4px;
-            border-radius: 3px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eye Gaze Project</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+    h1 { color: #333; }
+    h2 { color: #555; }
+    code { background: #eaeaea; padding: 2px 4px; border-radius: 4px; }
+    .script { background: #fff; padding: 15px; margin: 15px 0; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1);}
+    a { color: #007bff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
-    <h1>Welcome to Eye Gaze Project</h1>
-    <p>This project uses Python scripts to track and click using eye gaze.</p>
-    <h2>Available Scripts:</h2>
-    <ul>
-        <li><a href="eye_gaze_project/calibrator.py" download><code>calibrator.py</code></a></li>
-        <li><a href="eye_gaze_project/camera_test.py" download><code>camera_test.py</code></a></li>
-        <li><a href="eye_gaze_project/clicker.py" download><code>clicker.py</code></a></li>
-        <li><a href="eye_gaze_project/eye_gaze_opencv.py" download><code>eye_gaze_opencv.py</code></a></li>
-        <li><a href="eye_gaze_project/README.md" download><code>README.md</code></a></li>
-        <li><a href="eye_gaze_project/requirements.txt" download><code>requirements.txt</code></a></li>
-    </ul>
-    <p>Or view the full repository on <a href="https://github.com/AnushaReddy121/YOUR_REPO" target="_blank">GitHub</a>.</p>
+
+  <h1>Eye Gaze Project</h1>
+  <p>This project uses Python scripts to track your eyes and control mouse clicks. You can run the scripts locally after setting up Python and the required packages.</p>
+
+  <h2>Setup Instructions</h2>
+  <ol>
+    <li>Clone or download this repository.</li>
+    <li>Create a Python virtual environment:
+      <pre><code>python -m venv eye_env</code></pre>
+    </li>
+    <li>Activate the environment:
+      <pre><code>.\eye_env\Scripts\activate  (Windows PowerShell)</code></pre>
+    </li>
+    <li>Install dependencies:
+      <pre><code>pip install -r requirements.txt</code></pre>
+    </li>
+    <li>Download <code>shape_predictor_68_face_landmarks.dat</code> and place it in the project folder.</li>
+  </ol>
+
+  <h2>Available Scripts</h2>
+
+  <div class="script">
+    <h3>calibrator.py</h3>
+    <p>Calibrates the eye tracker for your screen. Follow on-screen points.</p>
+    <p><strong>Run:</strong> <code>python calibrator.py</code></p>
+  </div>
+
+  <div class="script">
+    <h3>camera_test.py</h3>
+    <p>Tests webcam and displays live video feed with eye landmarks.</p>
+    <p><strong>Run:</strong> <code>python camera_test.py</code></p>
+  </div>
+
+  <div class="script">
+    <h3>clicker.py</h3>
+    <p>Tracks eye blinks to simulate mouse clicks.</p>
+    <p><strong>Run:</strong> <code>python clicker.py</code></p>
+  </div>
+
+  <div class="script">
+    <h3>eye_gaze_opencv.py</h3>
+    <p>Tracks eye gaze position and prints coordinates or moves pointer.</p>
+    <p><strong>Run:</strong> <code>python eye_gaze_opencv.py</code></p>
+  </div>
+
+  <div class="script">
+    <h3>requirements.txt</h3>
+    <p>Contains all Python dependencies:</p>
+    <pre><code>
+numpy==1.26.0
+opencv-python==4.12.0.88
+dlib==19.24.1
+scipy==1.16.3
+imutils==0.5.4
+pyautogui==0.9.54
+    </code></pre>
+  </div>
+
+  <div class="script">
+    <h3>README.md</h3>
+    <p>Documentation for the project. Provides instructions and overview.</p>
+  </div>
+
+  <h2>Notes</h2>
+  <ul>
+    <li>Ensure your webcam is working before running scripts.</li>
+    <li>Use Python 3.11 to match dependencies.</li>
+    <li>All scripts must be run in the virtual environment where dependencies are installed.</li>
+  </ul>
+
 </body>
 </html>
